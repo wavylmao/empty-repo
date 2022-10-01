@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const defaultTheme = require("tailwindcss/defaultTheme");
+      tailwind.config = {
+        theme: {
+          screens: {
+            'xs': "280px",
+            'mm': "375px",
+            'ms': "320px",
+            ...defaultTheme.screens,
+          },
+          extend: {
+            colors: {
+              "violet-purple": "hsl(257, 40%, 49%)",
+              "soft-magenta": "hsl(300, 69%, 71%)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>
+      Frontend Mentor | Huddle landing page with single introductory section
+    </title>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="wrapper grid xs:grid-cols-1 text-center md:text-left bg-[url('images/bg-mobile.svg')] xs:p-3 md:bg-[url('images/bg-desktop.svg')] md:p-6 lg:pr-28"
+    >
+      <div class="column-1">
+        <img src="./images/logo.svg" class="w-32 md:w-44 m-5 md:absolute md:top-10" alt="" />
+        <img
+          src="./images/illustration-mockups.svg"
+          alt=""
+          class="xs:w-64 mx-auto md:w-105 md:my-auto"
+        />
+      </div>
+      <div class="column-2 md:mx-5 lg:mx-none">
+        <h1 class="text-2xl lg:text-4xl header text-white">
+          Build The Community Your Fans Will Love
+        </h1>
+        <p class="text-white paragraph xs:m-auto my-10">
+          Huddle re-imagines the way we build communities. You have a voice, but
+          so does your audience. Create connections with your users as you
+          engage in genuine discussion.
+        </p>
+        <a href="" class="bg-white m-auto py-3 px-20 rounded-full button"
+          >Register</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

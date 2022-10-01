@@ -1,0 +1,38 @@
+.wrapper {
+  min-height: 100vh;
+  background-color: hsl(257, 40%, 49%);
+}
+
+.header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.paragraph {
+  font-family: "Open Sans", sans-serif;
+}
+
+.button {
+  color: hsl(257, 40%, 49%);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: 65% 35%;
+    align-items: center;
+  }
+
+  .column-1:first-child {
+    align-items: baseline;
+  }
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        grid-template-columns: 55% 45%;
+    }
+
+    .column-2 {
+        margin-left: 50px;
+    }
+}
