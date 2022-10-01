@@ -21,10 +21,6 @@
     grid-template-columns: 65% 35%;
     align-items: center;
   }
-
-  .column-1:first-child {
-    align-items: baseline;
-  }
 }
 
 @media (min-width: 1024px) {
